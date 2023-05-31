@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+:root{
+  --Tomato: hsl(4, 100%, 67%);
+  --dark-Slate-Grey: hsl(234, 29%, 20%);
+  --charcoal-Grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%); 
+}
+  *{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--charcoal-Grey);
+  font-size: 16px;
+  min-height: 100vh;
+  display: grid;
+  font-family: "Roboto";
+  line-height: 01.6;
+  place-content: center;
+}
+
+.box{
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.box.success{
+  display: initial;
+  padding: 3.5rem;
+}
+.a{
+  color: var(--dark-Slate-Grey);
+  padding: 4rem 2rem 2rem 2rem;
+}
+.a-element{
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.a-element p,
+.a-element ul{
+  margin-bottom: 22px;
+
+}
+.a-element ul li{
+  list-style-image: url(assets/images/icon-list.svg);
+  list-style-position: inside;
+}
+.form-element{
+  display: flex;
+  flex-direction: column;
+}
+.form-element label{
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px
+}
+.form-element label .invalid-email{
+  color: var(--Tomato);
+  display: none;
+}
+.form-element label .invalid-email.active{
+  display: block;
+}
+.form-element button{
+  cursor: pointer;
+  background-color: var(--dark-Slate-Grey);
+  color: var(--white);
+  font-weight: 700;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+.form-element input{
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--grey);
+}
+.form-element input.active{
+  background-color: rgba(255, 98, 97, 0.2);
+  border: 1px solid var(--Tomato);
+}
+ .form-element button:hover{
+  background: linear-gradient(127deg,rgb(255, 60, 122) 40%,rgb(255, 153, 28) 70%);
+}
+.b{
+  text-align: right ;
+}
+.confirm{
+  display: none;
+  line-height: 1.2;
+}
+.confirm.active{
+  display: block;
+
+}
+.confirm img{
+  width: 80px;
+
+}
+.confirm h1{
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+.confirm p{
+  margin: 2rem 0;
+}
+.confirm button{
+  cursor: pointer;
+  background-color: var(--dark-Slate-Grey);
+  color: var(--white);
+  font-weight: 700;
+  width: 100%;
+  padding : 1rem;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+
+}
+.confirm button:hover{
+  background: linear-gradient(127deg,rgb(255, 60, 122) 40%,rgb(255, 153, 28) 70%);
+}
+#user-email{
+  font-weight: 700;
+}
+@media(max-width:760px){
+body{
+  display: initial;
+  line-height: 1.4 ;
+}
+.box{
+  height: initial;
+  width: 100%; 
+  padding: 0;
+  grid-template-columns: 1fr ;
+}
+.box.success{
+  display: block;
+  padding: initial;
+}
+.a{
+  padding: 1rem 2rem;
+  grid-row: 2;
+}
+.a-element ul li{
+  margin-bottom: 1rem;
+}
+.b img{
+  width: 100%;
+}
+.confirm.active{
+  height: 100vh;
+  padding: 14rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.confirm button{
+  margin-top: auto;
+}
+ }
